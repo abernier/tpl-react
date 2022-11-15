@@ -33,7 +33,10 @@ jobs:
           node-version: "16"
           cache: "npm"
       - run: npm ci
-      - run: VITE_BASE_URL="https://$USERNAME.github.io/$REPONAME" CI="false" npm run build
+      - run: npx vite build --base="/$REPONAME/"
+        env:
+          USERNAME: ${{ github.repository_owner }}
+          REPONAME: ${{ github.event.repository.name }}
       - uses: actions/upload-pages-artifact@v1
         with:
           path: ./dist
