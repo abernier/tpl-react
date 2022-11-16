@@ -1,4 +1,4 @@
-Try on: [Codespace](https://github.com/codespaces/new?template=abernier%2Ftpl-react&repo=566536456) | [CodeSandbox](https://codesandbox.io/s/github/abernier/tpl-react)
+Try on: [Codespace](https://github.com/codespaces/new?template_repository=abernier%2Ftpl-react) | [CodeSandbox](https://codesandbox.io/s/github/abernier/tpl-react)
 
 # INSTALL
 
