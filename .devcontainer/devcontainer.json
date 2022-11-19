@@ -1,13 +1,9 @@
 {
-  "hostRequirements": {
-    "cpus": 4
-  },
+  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:16",
   "waitFor": "onCreateCommand",
   "updateContentCommand": "npm ci",
   "postCreateCommand": "",
-  "postAttachCommand": {
-    "server": "npm run dev"
-  },
+  "postAttachCommand": "npm run dev -- --port 5173",
   "customizations": {
     "codespaces": {
       "openFiles": ["src/App.tsx"]
@@ -15,8 +11,8 @@
   },
   "portsAttributes": {
     "5173": {
-      "label": "Application",
-      "onAutoForward": "openPreview"
+      "label": "Vite dev server",
+      "onAutoForward": "notify"
     }
   },
   "forwardPorts": [5173]
